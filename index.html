@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Ingredients Executive Risk Management Review | Specialty Insurance Partners</title>
+  <meta name="description" content="Executive risk management review prepared for Just Ingredients by Specialty Insurance Partners." />
+  <style>
+    :root {
+      --navy: #060a4f;
+      --navy-2: #11175f;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e4e7ec;
+      --soft: #f8fafc;
+      --soft-2: #eef2ff;
+      --white: #ffffff;
+      --green: #0f766e;
+      --amber: #a16207;
+      --red: #b42318;
+      --blue: #175cd3;
+      --shadow: 0 18px 50px rgba(17, 24, 39, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(6, 10, 79, 0.10), transparent 34rem),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 58%, #ffffff 100%);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .site-shell {
+      min-height: 100vh;
+    }
+
+    .utility-bar {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 0.82rem;
+    }
+
+    .utility-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.58rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .utility-inner strong {
+      color: #fff;
+      font-weight: 800;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(228, 231, 236, 0.9);
+    }
+
+    .brand-row {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.05rem 1.25rem 0.75rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .brand-left, .brand-right {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .brand-right {
+      justify-content: flex-end;
+    }
+
+    .ji-logo {
+      width: min(210px, 40vw);
+      height: auto;
+      object-fit: contain;
+    }
+
+    .sip-logo {
+      width: min(265px, 44vw);
+      height: auto;
+      object-fit: contain;
+    }
+
+    .title-lockup {
+      text-align: center;
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      color: var(--navy);
+      background: var(--soft-2);
+      border: 1px solid rgba(6, 10, 79, 0.12);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .title-lockup h1 {
+      margin: 0.45rem 0 0.15rem;
+      color: var(--navy);
+      font-size: clamp(1.35rem, 2.2vw, 2.25rem);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
+    }
+
+    .title-lockup p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .nav-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem 1rem;
+    }
+
+    .tablist {
+      display: grid;
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      gap: 0.45rem;
+      background: #f2f4f7;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.38rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+    }
+
+    .tab-button {
+      border: 0;
+      background: transparent;
+      color: #475467;
+      border-radius: 999px;
+      padding: 0.68rem 0.62rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 160ms ease;
+      white-space: nowrap;
+      letter-spacing: -0.01em;
+    }
+
+    .tab-button:hover {
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.75);
+    }
+
+    .tab-button.active {
+      background: var(--navy);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(6, 10, 79, 0.20);
+    }
+
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      color: var(--navy);
+      font-weight: 800;
+      box-shadow: var(--shadow);
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.6rem 1.25rem 3.5rem;
+    }
+
+    .tab-panel {
+      display: none;
+      animation: fadeUp 220ms ease both;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(7px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(6, 10, 79, 0.97) 0%, rgba(19, 26, 105, 0.94) 55%, rgba(15, 118, 110, 0.82) 100%);
+      color: #fff;
+      border-radius: calc(var(--radius) + 8px);
+      padding: clamp(1.75rem, 4vw, 3.4rem);
+      box-shadow: 0 26px 70px rgba(6, 10, 79, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 31rem;
+      height: 31rem;
+      right: -14rem;
+      top: -13rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    .hero > * { position: relative; z-index: 1; }
+
+    .hero-kicker {
+      display: inline-flex;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      color: rgba(255,255,255,0.87);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      margin: 1rem 0 0.75rem;
+      font-size: clamp(2rem, 4.7vw, 4.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+      max-width: 950px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      color: rgba(255,255,255,0.86);
+      font-size: clamp(1.02rem, 1.65vw, 1.25rem);
+      margin: 0;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1.75rem;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 1rem;
+      min-height: 128px;
+    }
+
+    .metric-card span {
+      display: block;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+    }
+
+    .metric-card strong {
+      display: block;
+      font-size: 1.02rem;
+      line-height: 1.28;
+      color: #fff;
+    }
+
+    .section-head {
+      margin: 2.2rem 0 1.15rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .section-head h2,
+    .section-head h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 2.7vw, 2.45rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .section-head p {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      max-width: 770px;
+      font-size: 1rem;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.35rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card.compact {
+      padding: 1rem;
+      border-radius: 18px;
+    }
+
+    .card h3,
+    .card h4 {
+      margin: 0 0 0.55rem;
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .card h3 { font-size: 1.2rem; }
+    .card h4 { font-size: 1.02rem; }
+
+    .card p {
+      margin: 0;
+      color: #475467;
+      font-size: 0.95rem;
+    }
+
+    .card ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.15rem;
+      color: #475467;
+    }
+
+    .card li + li { margin-top: 0.35rem; }
+
+    .callout {
+      border-radius: var(--radius);
+      border: 1px solid rgba(6,10,79,0.12);
+      background: linear-gradient(135deg, #fff, #f6f8ff);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .callout strong {
+      color: var(--navy);
+    }
+
+    .quote-card {
+      border-left: 5px solid var(--navy);
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.2rem 1.3rem;
+      box-shadow: var(--shadow);
+      color: #344054;
+      font-size: 1.02rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.95rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.42rem 0.68rem;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: #475467;
+      font-size: 0.79rem;
+      font-weight: 800;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.35rem 0.62rem;
+      font-size: 0.73rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .status-in-place { background: #ecfdf3; color: #027a48; border: 1px solid #abefc6; }
+    .status-review { background: #fffaeb; color: #b54708; border: 1px solid #fedf89; }
+    .status-gap { background: #fef3f2; color: #b42318; border: 1px solid #fecdca; }
+    .status-outside { background: #eef4ff; color: #3538cd; border: 1px solid #c7d7fe; }
+
+    .coverage-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin: 1rem 0 1.1rem;
+    }
+
+    .filter-button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #475467;
+      border-radius: 999px;
+      padding: 0.58rem 0.82rem;
+      font-weight: 850;
+      cursor: pointer;
+      transition: 160ms ease;
+    }
+
+    .filter-button:hover,
+    .filter-button.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .coverage-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 10px 30px rgba(17,24,39,0.05);
+      display: flex;
+      flex-direction: column;
+      min-height: 194px;
+    }
+
+    .coverage-card.hidden { display: none; }
+
+    .coverage-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .coverage-card h4 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1rem;
+      line-height: 1.18;
+    }
+
+    .coverage-card p {
+      color: #475467;
+      font-size: 0.89rem;
+      margin: 0.2rem 0 0.7rem;
+    }
+
+    .coverage-meta {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.55rem;
+      color: #667085;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .priority {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 0.35rem 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .priority-essential { background: #fef3f2; color: var(--red); }
+    .priority-recommended { background: #fffaeb; color: var(--amber); }
+    .priority-as-needed { background: #eef4ff; color: var(--blue); }
+
+    .risk-row {
+      display: grid;
+      grid-template-columns: 0.9fr 1.5fr 1.3fr;
+      gap: 1rem;
+      align-items: stretch;
+      margin-bottom: 0.9rem;
+    }
+
+    .risk-label {
+      border-radius: 18px;
+      padding: 1rem;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .risk-label h4 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .risk-label p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.88rem;
+    }
+
+    .risk-label.red { background: linear-gradient(135deg, #b42318, #d92d20); }
+    .risk-label.amber { background: linear-gradient(135deg, #a16207, #d18b00); }
+    .risk-label.blue { background: linear-gradient(135deg, #175cd3, #3538cd); }
+
+    .risk-list {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 10px 30px rgba(17,24,39,0.05);
+    }
+
+    .risk-list h4 {
+      margin: 0 0 0.5rem;
+      color: var(--navy);
+    }
+
+    .risk-list ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: #475467;
+    }
+
+    .risk-list li + li { margin-top: 0.25rem; }
+
+    .tower-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .tower {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tower::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 6px;
+      background: var(--navy);
+    }
+
+    .tower h3 {
+      margin: 0.65rem 0 0.75rem;
+      color: var(--navy);
+      font-size: 1.02rem;
+    }
+
+    .layer {
+      border: 1px solid #d0d5dd;
+      background: linear-gradient(180deg, #fff, #f9fafb);
+      border-radius: 12px;
+      padding: 0.62rem;
+      font-size: 0.8rem;
+      color: #344054;
+      font-weight: 760;
+      text-align: center;
+      margin-bottom: 0.48rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+      counter-reset: phase;
+    }
+
+    .phase {
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .phase-number {
+      counter-increment: phase;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 950;
+      font-size: 1.45rem;
+      box-shadow: var(--shadow);
+    }
+
+    .phase-number::after {
+      content: counter(phase);
+    }
+
+    .phase-body {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1.15rem;
+      box-shadow: var(--shadow);
+    }
+
+    .phase-body h3 {
+      margin: 0 0 0.5rem;
+      color: var(--navy);
+      font-size: 1.16rem;
+    }
+
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.4rem 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .check {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      color: #475467;
+      font-size: 0.92rem;
+    }
+
+    .check::before {
+      content: "✓";
+      flex: 0 0 auto;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: #ecfdf3;
+      color: #027a48;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.74rem;
+      font-weight: 900;
+      margin-top: 0.1rem;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-top: 0.8rem;
+    }
+
+    .source-list a {
+      display: block;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.8rem;
+      color: #344054;
+      font-size: 0.88rem;
+      box-shadow: 0 8px 24px rgba(17,24,39,0.04);
+    }
+
+    .panel-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.1rem;
+    }
+
+    .nav-action {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 0.78rem 1rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-action.primary {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: #fff;
+      color: #667085;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-inner strong {
+      color: var(--navy);
+    }
+
+    @media (max-width: 1080px) {
+      .tablist {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-radius: 24px;
+      }
+
+      .tab-button {
+        border-radius: 18px;
+      }
+
+      .hero-metrics,
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .coverage-grid,
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tower-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .risk-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .utility-inner {
+        display: block;
+        text-align: center;
+      }
+
+      .utility-inner span + span {
+        display: block;
+        margin-top: 0.25rem;
+      }
+
+      .brand-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        text-align: center;
+        padding-top: 0.85rem;
+      }
+
+      .brand-left,
+      .brand-right {
+        justify-content: center;
+      }
+
+      .ji-logo { width: 160px; }
+      .sip-logo { width: 205px; }
+
+      .title-lockup {
+        order: 3;
+      }
+
+      .tablist { display: none; }
+      .mobile-nav { display: block; }
+
+      main {
+        padding-top: 1rem;
+      }
+
+      .hero {
+        padding: 1.45rem;
+        border-radius: 22px;
+      }
+
+      .hero h2 {
+        font-size: 2.15rem;
+      }
+
+      .hero-metrics,
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .coverage-grid,
+      .tower-grid,
+      .decision-grid,
+      .source-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .phase {
+        grid-template-columns: 1fr;
+      }
+
+      .phase-number {
+        width: 58px;
+        height: 58px;
+      }
+
+      .check-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .panel-nav {
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    @media print {
+      header, .utility-bar, .panel-nav, .coverage-toolbar { display: none !important; }
+      body { background: #fff; }
+      main { max-width: none; padding: 0; }
+      .tab-panel { display: block !important; page-break-after: always; }
+      .hero, .card, .callout, .coverage-card, .tower, .phase-body, .risk-list { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <div class="utility-bar">
+      <div class="utility-inner">
+        <span><strong>Private Executive Review</strong> | Prepared for Just Ingredients</span>
+        <span>Prepared by Specialty Insurance Partners</span>
+      </div>
+    </div>
+
+    <header>
+      <div class="brand-row">
+        <div class="brand-left">
+          <img class="ji-logo" src="Just_Ingredients_Logos_Registered_JI_Logo_Black_Registered.avif" alt="Just Ingredients logo" />
+        </div>
+        <div class="title-lockup">
+          <span class="eyebrow">Risk Management Strategy</span>
+          <h1>Executive Risk Management Review</h1>
+          <p>Coverage architecture, risk priorities, and growth-stage strategy</p>
+        </div>
+        <div class="brand-right">
+          <img class="sip-logo" src="Specialty-Insurance-Partners_Base-scaled.png" alt="Specialty Insurance Partners logo" />
+        </div>
+      </div>
+
+      <div class="nav-wrap">
+        <div class="tablist" role="tablist" aria-label="Site navigation">
+          <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-summary" data-tab="summary">Summary</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-profile" data-tab="profile">Risk Profile</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-program" data-tab="program">Current Program</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-gaps" data-tab="gaps">Gap Analysis</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-architecture" data-tab="architecture">Architecture</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-roadmap" data-tab="roadmap">Roadmap</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-sip" data-tab="sip">SIP Strategy</button>
+          <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-next" data-tab="next">Next Steps</button>
+        </div>
+
+        <select class="mobile-nav" aria-label="Mobile section navigation">
+          <option value="summary">Executive Summary</option>
+          <option value="profile">Just Ingredients Risk Profile</option>
+          <option value="program">Current Insurance Program</option>
+          <option value="gaps">Priority Gap Analysis</option>
+          <option value="architecture">Coverage Architecture</option>
+          <option value="roadmap">Risk Management Roadmap</option>
+          <option value="sip">SIP Advisory Strategy</option>
+          <option value="next">Executive Decision Points</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <section class="tab-panel active" id="panel-summary" role="tabpanel" data-panel="summary">
+        <div class="hero">
+          <span class="hero-kicker">Prepared for the Just Ingredients Executive Team</span>
+          <h2>A growth-stage risk strategy for a broader consumer wellness platform.</h2>
+          <p>
+            Just Ingredients has evolved into a complex consumer wellness, nutraceutical, sports nutrition, beauty, and lifestyle brand. The insurance program should now be evaluated by how well it protects product integrity, revenue continuity, brand trust, executive leadership, and enterprise value.
+          </p>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span>Program Objective</span>
+              <strong>Move beyond policy placement into a disciplined risk management strategy.</strong>
+            </div>
+            <div class="metric-card">
+              <span>Primary Concern</span>
+              <strong>Severity exposure from products, recall, advertising, cyber, and public-facing brand risk.</strong>
+            </div>
+            <div class="metric-card">
+              <span>Review Posture</span>
+              <strong>Identify where the current program is strong and where it should mature.</strong>
+            </div>
+            <div class="metric-card">
+              <span>SIP Role</span>
+              <strong>Translate the business model into a clear underwriting and risk transfer strategy.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Executive Framing</div>
+            <h2>The insurance program should scale with the business.</h2>
+            <p>
+              This review is intended to give leadership a clear picture of current program structure, priority exposures, strategic gaps, and the process Specialty Insurance Partners recommends for the next phase of growth.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <h3>Current Position</h3>
+            <p>Just Ingredients now operates with a broader risk profile than a traditional single-category nutraceutical account.</p>
+          </div>
+          <div class="card">
+            <h3>Severity Drivers</h3>
+            <p>Product liability, recall, contamination, regulatory claims, cyber disruption, and media exposure can each create enterprise-level consequences.</p>
+          </div>
+          <div class="card">
+            <h3>Risk Transfer Goal</h3>
+            <p>Coverage should be structured around claim scenarios, contract requirements, operating dependencies, and leadership’s risk tolerance.</p>
+          </div>
+          <div class="card">
+            <h3>Strategic Outcome</h3>
+            <p>Build a defensible program that supports growth, retailer confidence, lender/investor diligence, and executive decision-making.</p>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Core Message</div>
+            <h2>What this review is designed to accomplish.</h2>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          The purpose of this review is not to suggest that every available coverage must be purchased immediately. The purpose is to separate essential risk transfer, strategic coverage enhancements, and trigger-based coverages that should be evaluated as Just Ingredients’ operations, contracts, distribution, and executive risk profile continue to evolve.
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="next">Previous</button>
+          <button class="nav-action primary" data-next="profile">Next: Risk Profile</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-profile" role="tabpanel" data-panel="profile">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Business Risk Profile</div>
+            <h2>A broader profile than traditional nutraceutical placement.</h2>
+            <p>
+              The risk profile should be viewed through the full Just Ingredients business model: ingestible products, sports nutrition, beauty/personal care, wholesale distribution, e-commerce, founder-led content, and manufacturing / supply chain dependency.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Ingestible Products</h3>
+            <p>Protein, electrolytes, supplements, pre-workout, energy drinks, collagen, and similar products create bodily injury, allergen, contamination, labeling, efficacy, and aggregation exposure.</p>
+          </div>
+          <div class="card">
+            <h3>Sports Nutrition</h3>
+            <p>Athlete-facing products and sports nutrition channels create quality control, banned-substance, endorsement, reputational, and contract-specific requirements.</p>
+          </div>
+          <div class="card">
+            <h3>Beauty & Personal Care</h3>
+            <p>Skin, hair, dental, and beauty products bring cosmetic regulatory, labeling, product safety, recall, and customer complaint considerations.</p>
+          </div>
+          <div class="card">
+            <h3>Wholesale / Retail</h3>
+            <p>Distribution into stores, gyms, spas, health-food channels, grocery, and professional or collegiate purchasing increases contract requirements and recall complexity.</p>
+          </div>
+          <div class="card">
+            <h3>Founder / Influencer Brand</h3>
+            <p>Public-facing brand growth creates a distinct media, endorsement, testimonial, advertising, right-of-publicity, and crisis communications exposure.</p>
+          </div>
+          <div class="card">
+            <h3>Manufacturing / Supply Chain</h3>
+            <p>Ingredient sourcing, co-packers, 3PLs, warehousing, quality controls, batch records, and traceability determine how claims are defended and how recall loss is contained.</p>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Severity Lens</div>
+            <h2>Risk should be evaluated by claim scenario, not just policy line.</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="callout">
+            <strong>Product incident scenario.</strong>
+            <p>
+              A contamination, mislabeling, ingredient, allergen, adverse reaction, or banned-substance event could create simultaneous product liability, recall, retailer chargeback, lost gross profit, crisis communications, and brand rehabilitation costs.
+            </p>
+          </div>
+          <div class="callout">
+            <strong>Brand and content scenario.</strong>
+            <p>
+              A claim connected to sponsored content, testimonials, wellness statements, product performance, customer reviews, or influencer campaigns may not fit cleanly into traditional general liability coverage.
+            </p>
+          </div>
+          <div class="callout">
+            <strong>Cyber / e-commerce scenario.</strong>
+            <p>
+              A ransomware, payment, privacy, website outage, vendor outage, or cloud disruption event could affect revenue continuity, customer trust, fulfillment, and executive communications.
+            </p>
+          </div>
+          <div class="callout">
+            <strong>Executive dependency scenario.</strong>
+            <p>
+              A highly visible founder or owner may be a material revenue, marketing, lender-confidence, and enterprise-value driver, which requires separate risk planning.
+            </p>
+          </div>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="summary">Previous: Summary</button>
+          <button class="nav-action primary" data-next="program">Next: Current Program</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-program" role="tabpanel" data-panel="program">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Current Insurance Program</div>
+            <h2>Coverage areas identified from the current program review.</h2>
+            <p>
+              This section intentionally shows coverage structure and review status only. Current limits, pricing, deductibles, retentions, and proposed limit targets are not displayed in this executive-facing version.
+            </p>
+          </div>
+        </div>
+
+        <div class="coverage-toolbar" aria-label="Coverage filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="Essential">Essential</button>
+          <button class="filter-button" data-filter="Recommended">Recommended</button>
+          <button class="filter-button" data-filter="As Needed">As Needed</button>
+          <button class="filter-button" data-filter="In Place">In Place</button>
+          <button class="filter-button" data-filter="Gap / Not Identified">Not Identified</button>
+          <button class="filter-button" data-filter="Review / Confirm">Review / Confirm</button>
+        </div>
+
+        <div class="coverage-grid" id="coverageGrid"></div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Program Interpretation</div>
+            <h2>The current program has meaningful structure, but the next review should focus on wording and strategic alignment.</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Coverage Exists</h3>
+            <p>Several core lines are identified in the current program, including liability, property, business income, auto, umbrella, recall, management liability, crime, and social engineering.</p>
+          </div>
+          <div class="card">
+            <h3>Coverage Gaps</h3>
+            <p>Cyber, media liability, stock throughput, manufacturer’s E&O, environmental, key person, executive protection, and other specialty lines should be evaluated against actual operations.</p>
+          </div>
+          <div class="card">
+            <h3>Wording Matters</h3>
+            <p>For nutraceutical and consumer wellness risks, exclusions, sublimits, follow-form provisions, recall triggers, advertising definitions, and claims-made conditions may be as important as the presence of coverage.</p>
+          </div>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="profile">Previous: Risk Profile</button>
+          <button class="nav-action primary" data-next="gaps">Next: Gap Analysis</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-gaps" role="tabpanel" data-panel="gaps">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Priority Gap Analysis</div>
+            <h2>Separate essential decisions from strategic and trigger-based coverage reviews.</h2>
+            <p>
+              The program should be evaluated by urgency, severity, operational relevance, contract requirements, and claim scenario fit.
+            </p>
+          </div>
+        </div>
+
+        <div class="risk-row">
+          <div class="risk-label red">
+            <h4>Essential / Immediate Review</h4>
+            <p>Coverage areas that can materially affect claim outcomes, contractual compliance, and executive risk posture.</p>
+          </div>
+          <div class="risk-list">
+            <h4>Priority Coverage Areas</h4>
+            <ul>
+              <li>Products Liability / Excess Liability</li>
+              <li>Product Recall / Contaminated Product</li>
+              <li>Cyber Liability</li>
+              <li>Media Liability / Content Liability</li>
+              <li>D&O and EPLI</li>
+              <li>Business Income / Extra Expense</li>
+              <li>Commercial Umbrella and Auto</li>
+              <li>General Liability wording and exclusions</li>
+            </ul>
+          </div>
+          <div class="risk-list">
+            <h4>Review Focus</h4>
+            <ul>
+              <li>Nutraceutical, ingestible, stimulant, weight-loss, or banned-substance exclusions</li>
+              <li>Recall triggers and adverse publicity wording</li>
+              <li>Excess follow-form over product and auto exposure</li>
+              <li>Cyber BI, dependent BI, ransomware, PCI, and incident response</li>
+              <li>Media, influencer, testimonials, and advertising claims</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="risk-row">
+          <div class="risk-label amber">
+            <h4>Strategic / Recommended Review</h4>
+            <p>Coverage areas that may improve resilience, reduce balance sheet exposure, or support larger contracts.</p>
+          </div>
+          <div class="risk-list">
+            <h4>Priority Coverage Areas</h4>
+            <ul>
+              <li>Stock Throughput / Cargo</li>
+              <li>Manufacturer’s E&O</li>
+              <li>Site Pollution / Environmental</li>
+              <li>Crime / Social Engineering</li>
+              <li>Fiduciary Liability</li>
+              <li>Equipment Breakdown</li>
+              <li>Key Person Life and Disability</li>
+              <li>K&R / Executive Protection</li>
+            </ul>
+          </div>
+          <div class="risk-list">
+            <h4>Review Focus</h4>
+            <ul>
+              <li>Inventory values across owned, in-transit, warehouse, and 3PL locations</li>
+              <li>Formulation, labeling, private label, and contract manufacturing obligations</li>
+              <li>Supplier indemnity and co-packer contract requirements</li>
+              <li>Founder dependency and enterprise value impact</li>
+              <li>Wire fraud controls and dual authorization procedures</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="risk-row">
+          <div class="risk-label blue">
+            <h4>Trigger-Based / As Needed</h4>
+            <p>Coverage areas tied to specific expansion plans, transactions, events, international activity, or contract terms.</p>
+          </div>
+          <div class="risk-list">
+            <h4>Priority Coverage Areas</h4>
+            <ul>
+              <li>Clinical Trials</li>
+              <li>Event Liability / Appearance Coverage</li>
+              <li>IP Defense / Enforcement Insurance</li>
+              <li>Trade Credit Insurance</li>
+              <li>Foreign Package / Political Risk</li>
+            </ul>
+          </div>
+          <div class="risk-list">
+            <h4>Review Focus</h4>
+            <ul>
+              <li>Clinical studies, trials, substantiation, or human subject research</li>
+              <li>Owner-led events, pop-ups, sampling, conferences, or live appearances</li>
+              <li>Key retailer or distributor receivables</li>
+              <li>International sales, travel, suppliers, or foreign product exposure</li>
+              <li>Brand names, packaging, formulas, content, and competitor disputes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="program">Previous: Current Program</button>
+          <button class="nav-action primary" data-next="architecture">Next: Architecture</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-architecture" role="tabpanel" data-panel="architecture">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Coverage Architecture</div>
+            <h2>The program should be designed as a coordinated risk tower.</h2>
+            <p>
+              A sophisticated program is not simply a schedule of policies. It is a coordinated structure where each coverage line has a defined role, avoids unnecessary gaps, and supports the company’s highest severity scenarios.
+            </p>
+          </div>
+        </div>
+
+        <div class="tower-grid">
+          <div class="tower">
+            <h3>Casualty Tower</h3>
+            <div class="layer">Commercial Umbrella / Excess</div>
+            <div class="layer">Products Liability</div>
+            <div class="layer">General Liability</div>
+            <div class="layer">Commercial Auto</div>
+            <div class="layer">Employers Liability</div>
+            <div class="layer">Prop 65 Consideration</div>
+          </div>
+
+          <div class="tower">
+            <h3>Product Recall Tower</h3>
+            <div class="layer">Recall Expense</div>
+            <div class="layer">Accidental Contamination</div>
+            <div class="layer">Malicious Tampering</div>
+            <div class="layer">Government Recall</div>
+            <div class="layer">Adverse Publicity</div>
+            <div class="layer">Lost Gross Profit</div>
+            <div class="layer">Brand Rehabilitation</div>
+          </div>
+
+          <div class="tower">
+            <h3>Cyber / Media Tower</h3>
+            <div class="layer">Cyber Liability</div>
+            <div class="layer">Ransomware / Extortion</div>
+            <div class="layer">Cyber BI / Dependent BI</div>
+            <div class="layer">Privacy / Breach Response</div>
+            <div class="layer">Media Liability</div>
+            <div class="layer">Influencer / Content Claims</div>
+            <div class="layer">Crisis PR</div>
+          </div>
+
+          <div class="tower">
+            <h3>Management Liability Tower</h3>
+            <div class="layer">Directors & Officers</div>
+            <div class="layer">Employment Practices</div>
+            <div class="layer">Fiduciary Liability</div>
+            <div class="layer">Crime / Fidelity</div>
+            <div class="layer">Social Engineering</div>
+            <div class="layer">Funds Transfer Fraud</div>
+          </div>
+
+          <div class="tower">
+            <h3>Property / Supply Chain Tower</h3>
+            <div class="layer">Commercial Property</div>
+            <div class="layer">Business Income</div>
+            <div class="layer">Extra Expense</div>
+            <div class="layer">Equipment Breakdown</div>
+            <div class="layer">Stock Throughput</div>
+            <div class="layer">Cargo / 3PL Locations</div>
+            <div class="layer">Contingent BI</div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Architecture Principles</div>
+            <h2>What the structure should accomplish.</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <h3>Follow-Form Discipline</h3>
+            <p>Confirm excess coverage follows underlying policies over the right exposures and does not introduce restrictive exclusions.</p>
+          </div>
+          <div class="card">
+            <h3>Sublimit Awareness</h3>
+            <p>Identify where a policy appears broad but important loss components are subject to sublimits or narrow triggers.</p>
+          </div>
+          <div class="card">
+            <h3>Contract Alignment</h3>
+            <p>Compare program structure against retailer, distributor, lender, venue, supplier, co-packer, and vendor requirements.</p>
+          </div>
+          <div class="card">
+            <h3>Claims Scenario Fit</h3>
+            <p>Test the program against realistic product incident, recall, cyber, media, property, and executive-risk scenarios.</p>
+          </div>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="gaps">Previous: Gap Analysis</button>
+          <button class="nav-action primary" data-next="roadmap">Next: Roadmap</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-roadmap" role="tabpanel" data-panel="roadmap">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Risk Management Roadmap</div>
+            <h2>A practical process for strengthening the program.</h2>
+            <p>
+              Specialty Insurance Partners recommends a structured review that confirms the actual risk profile, audits the current program, builds the market strategy, and then presents executive-level decisions.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="phase">
+            <div class="phase-number" aria-hidden="true"></div>
+            <div class="phase-body">
+              <h3>Confirm the Risk Profile</h3>
+              <p>Collect the operational information needed to match coverage strategy to actual exposure.</p>
+              <div class="check-grid">
+                <div class="check">Revenue by product category</div>
+                <div class="check">Revenue by distribution channel</div>
+                <div class="check">Manufacturing, co-packer, supplier, and 3PL relationships</div>
+                <div class="check">Product testing, COAs, batch records, and quality controls</div>
+                <div class="check">Claims, complaints, and adverse event history</div>
+                <div class="check">Current contracts and insurance requirements</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phase">
+            <div class="phase-number" aria-hidden="true"></div>
+            <div class="phase-body">
+              <h3>Audit the Insurance Program</h3>
+              <p>Review policy language and program design before approaching the market.</p>
+              <div class="check-grid">
+                <div class="check">Policy wording, exclusions, and definitions</div>
+                <div class="check">Sublimits, deductibles, retentions, and claims conditions</div>
+                <div class="check">Named insured and additional insured requirements</div>
+                <div class="check">Excess follow-form and vertical tower consistency</div>
+                <div class="check">Recall, contamination, and adverse publicity triggers</div>
+                <div class="check">Cyber, media, and advertising coverage gaps</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phase">
+            <div class="phase-number" aria-hidden="true"></div>
+            <div class="phase-body">
+              <h3>Build the Market Strategy</h3>
+              <p>Present Just Ingredients to carriers with an accurate, favorable, and defensible underwriting narrative.</p>
+              <div class="check-grid">
+                <div class="check">Target carriers by coverage line</div>
+                <div class="check">Underwriting submission narrative</div>
+                <div class="check">Quality control and recall readiness documentation</div>
+                <div class="check">Loss control and contractual risk transfer summary</div>
+                <div class="check">Limit adequacy and retention strategy</div>
+                <div class="check">Renewal timeline and negotiation plan</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phase">
+            <div class="phase-number" aria-hidden="true"></div>
+            <div class="phase-body">
+              <h3>Executive Decision Review</h3>
+              <p>Convert coverage analysis into leadership-level decisions.</p>
+              <div class="check-grid">
+                <div class="check">Priority coverage recommendations</div>
+                <div class="check">Optional enhancements and tradeoffs</div>
+                <div class="check">Program gaps and decision urgency</div>
+                <div class="check">Carrier options and structure comparison</div>
+                <div class="check">Implementation responsibilities</div>
+                <div class="check">Ongoing stewardship cadence</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="architecture">Previous: Architecture</button>
+          <button class="nav-action primary" data-next="sip">Next: SIP Strategy</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-sip" role="tabpanel" data-panel="sip">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Specialty Insurance Partners Advisory Strategy</div>
+            <h2>Why continuity and specialization matter for Just Ingredients.</h2>
+            <p>
+              Specialty Insurance Partners’ value is not limited to insurance market access. The value is in understanding Just Ingredients’ business model, translating that risk profile into a disciplined insurance strategy, and helping leadership make informed decisions as the company continues to scale.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Account History</h3>
+            <p>SIP has worked with Just Ingredients over multiple years and can use that account history to support a more accurate underwriting narrative.</p>
+          </div>
+          <div class="card">
+            <h3>Industry Familiarity</h3>
+            <p>The advisory team has experience with nutraceutical, dietary supplement, product manufacturing, and complex consumer product risk.</p>
+          </div>
+          <div class="card">
+            <h3>Underwriting Narrative</h3>
+            <p>SIP can help carriers understand growth, quality controls, product mix, distribution, and risk controls in a way that supports better underwriting outcomes.</p>
+          </div>
+          <div class="card">
+            <h3>Policy Wording Discipline</h3>
+            <p>The review should challenge exclusions, sublimits, definitions, and follow-form concerns that may materially affect claim outcomes.</p>
+          </div>
+          <div class="card">
+            <h3>Executive-Level Guidance</h3>
+            <p>The goal is to help leadership determine which risks should be transferred, retained, mitigated, monitored, or revisited as the company grows.</p>
+          </div>
+          <div class="card">
+            <h3>Ongoing Stewardship</h3>
+            <p>Beyond renewal, SIP can maintain a cadence around claims trends, exposure changes, contract requirements, program updates, and risk-control priorities.</p>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Broker Differentiation</div>
+            <h2>The opportunity is to lead with strategy, not just quotes.</h2>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p>
+            A competing broker may focus on pricing, market access, or policy limits. SIP’s strongest position is to show that the team already understands the account, understands the industry, and has a practical process to evolve the program around Just Ingredients’ actual operations, brand, contracts, and growth plan.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Account Continuity</span>
+            <span class="pill">Nutraceutical Expertise</span>
+            <span class="pill">Policy Wording Review</span>
+            <span class="pill">Carrier Narrative</span>
+            <span class="pill">Executive Stewardship</span>
+          </div>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="roadmap">Previous: Roadmap</button>
+          <button class="nav-action primary" data-next="next">Next: Next Steps</button>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-next" role="tabpanel" data-panel="next">
+        <div class="section-head">
+          <div>
+            <div class="section-label">Executive Decision Points</div>
+            <h2>Recommended next steps for the executive team.</h2>
+            <p>
+              The next meeting should confirm the preferred strategy, identify the information needed to complete the review, and agree on the timeline for presenting coverage recommendations.
+            </p>
+          </div>
+        </div>
+
+        <div class="decision-grid">
+          <div class="card">
+            <h3>Immediate Decisions</h3>
+            <ul>
+              <li>Confirm whether SIP should lead a formal program audit before renewal.</li>
+              <li>Confirm whether additional markets should be approached strategically.</li>
+              <li>Confirm which coverage gaps require immediate underwriting attention.</li>
+              <li>Confirm which coverages should remain trigger-based for future review.</li>
+              <li>Confirm whether leadership wants an executive presentation after the audit.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Information Needed</h3>
+            <ul>
+              <li>Current policy schedule, declarations, and endorsements.</li>
+              <li>Product and revenue breakdown by category and channel.</li>
+              <li>Manufacturing, co-packer, supplier, warehouse, and 3PL details.</li>
+              <li>Recall plan, quality controls, testing protocols, and COAs.</li>
+              <li>Retailer, distributor, vendor, venue, and customer contract requirements.</li>
+              <li>Cybersecurity controls, incident response plan, and e-commerce dependencies.</li>
+              <li>Claims, complaints, adverse events, and business interruption values.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Meeting Agenda</div>
+            <h2>Suggested executive discussion flow.</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card compact">
+            <h4>1. Confirm Current Program View</h4>
+            <p>Review the current coverage structure and clarify any assumptions.</p>
+          </div>
+          <div class="card compact">
+            <h4>2. Confirm Priority Exposures</h4>
+            <p>Align on the risk areas leadership views as most material.</p>
+          </div>
+          <div class="card compact">
+            <h4>3. Discuss Coverage Gaps</h4>
+            <p>Separate urgent gaps from strategic and trigger-based items.</p>
+          </div>
+          <div class="card compact">
+            <h4>4. Agree on Market Strategy</h4>
+            <p>Determine where new market engagement is appropriate.</p>
+          </div>
+          <div class="card compact">
+            <h4>5. Assign Information Requests</h4>
+            <p>Identify what is needed from finance, operations, legal, and quality.</p>
+          </div>
+          <div class="card compact">
+            <h4>6. Set Presentation Timeline</h4>
+            <p>Establish the date for executive recommendations and decisions.</p>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <div>
+            <div class="section-label">Source Notes</div>
+            <h2>Reference points used to inform the framework.</h2>
+            <p>
+              These references support the risk themes only. Final coverage recommendations should be based on policy review, underwriting data, contracts, claims history, and leadership’s risk tolerance.
+            </p>
+          </div>
+        </div>
+
+        <div class="source-list">
+          <a href="https://justingredients.com/" target="_blank" rel="noopener">Just Ingredients public product and brand information</a>
+          <a href="https://justingredients.com/pages/wholesale" target="_blank" rel="noopener">Just Ingredients wholesale / distribution context</a>
+          <a href="https://specialtyinsurancepartners.com/team/" target="_blank" rel="noopener">Specialty Insurance Partners team and specialization reference</a>
+          <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-111" target="_blank" rel="noopener">21 CFR Part 111 dietary supplement CGMP reference</a>
+          <a href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews" target="_blank" rel="noopener">FTC endorsements, influencers, testimonials, and reviews guidance</a>
+          <a href="https://www.fda.gov/cosmetics/registration-listing-cosmetic-product-facilities-and-products" target="_blank" rel="noopener">FDA cosmetic facility registration and product listing information</a>
+          <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/product-recalls-including-removals-and-corrections" target="_blank" rel="noopener">FDA product recalls, removals, and corrections guidance</a>
+          <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/guidance-industry-questions-and-answers-regarding-adverse-event-reporting-and-recordkeeping-dietary" target="_blank" rel="noopener">FDA dietary supplement adverse event reporting and recordkeeping guidance</a>
+        </div>
+
+        <div class="panel-nav">
+          <button class="nav-action" data-prev="sip">Previous: SIP Strategy</button>
+          <button class="nav-action primary" data-next="summary">Back to Summary</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div><strong>Prepared for Just Ingredients</strong> by Specialty Insurance Partners</div>
+        <div>Private risk management review | For discussion purposes only</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const tabs = [
+      "summary",
+      "profile",
+      "program",
+      "gaps",
+      "architecture",
+      "roadmap",
+      "sip",
+      "next"
+    ];
+
+    const tabLabels = {
+      summary: "Executive Summary",
+      profile: "Just Ingredients Risk Profile",
+      program: "Current Insurance Program",
+      gaps: "Priority Gap Analysis",
+      architecture: "Coverage Architecture",
+      roadmap: "Risk Management Roadmap",
+      sip: "SIP Advisory Strategy",
+      next: "Executive Decision Points"
+    };
+
+    const coverageData = [
+      {
+        coverage: "Commercial General Liability",
+        status: "Review / Confirm",
+        priority: "Essential",
+        category: "Core Operating Protection",
+        note: "Coverage is identified in the current program. Products/completed operations treatment should be confirmed and exclusionary wording should be reviewed."
+      },
+      {
+        coverage: "Commercial Property",
+        status: "Review / Confirm",
+        priority: "Essential",
+        category: "Core Operating Protection",
+        note: "Coverage is under review, including whether a blanket property approach is available and appropriate."
+      },
+      {
+        coverage: "Business Income & Extra Expense",
+        status: "In Place",
+        priority: "Essential",
+        category: "Core Operating Protection",
+        note: "Coverage is identified. Adequacy should be reviewed against shutdown duration, relaunch timeline, retailer penalties, and contingent dependencies."
+      },
+      {
+        coverage: "Equipment Breakdown",
+        status: "In Place",
+        priority: "Recommended",
+        category: "Property / Operations",
+        note: "Coverage is identified. Review alignment with production loss, spoilage, utility interruption, and business income exposure."
+      },
+      {
+        coverage: "Commercial Auto",
+        status: "In Place",
+        priority: "Essential",
+        category: "Core Operating Protection",
+        note: "Coverage is identified. Hired/non-owned auto and executive, employee, rental, and product transport exposure should be confirmed."
+      },
+      {
+        coverage: "Commercial Umbrella",
+        status: "In Place",
+        priority: "Essential",
+        category: "Core Operating Protection",
+        note: "Coverage is identified. Review whether the umbrella/excess structure responds appropriately over GL and auto exposure."
+      },
+      {
+        coverage: "Clinical Trials",
+        status: "Gap / Not Identified",
+        priority: "As Needed",
+        category: "Trigger-Based Coverage",
+        note: "Not identified in the current program. Evaluate only if clinical studies, trials, substantiation activity, or human subject research applies."
+      },
+      {
+        coverage: "Products Liability / Excess Liability, including Prop 65",
+        status: "In Place",
+        priority: "Essential",
+        category: "Product & Brand Protection",
+        note: "Coverage is identified. Review excess follow-form, Prop 65 treatment, and exclusions for nutraceutical, ingestible, efficacy, stimulant, weight-loss, or banned-substance claims."
+      },
+      {
+        coverage: "Product Recall / Contaminated Product",
+        status: "In Place",
+        priority: "Essential",
+        category: "Product & Brand Protection",
+        note: "Coverage is identified. Review triggers for contamination, mislabeling, government recall, adverse publicity, retailer chargebacks, and lost gross profit."
+      },
+      {
+        coverage: "Product Withdrawal Expense Endorsement",
+        status: "In Place",
+        priority: "Recommended",
+        category: "Product & Brand Protection",
+        note: "Coverage is identified as supplemental. It should not be treated as a replacement for standalone recall or contaminated product coverage."
+      },
+      {
+        coverage: "Stock Throughput / Cargo / Ocean Marine",
+        status: "Gap / Not Identified",
+        priority: "Recommended",
+        category: "Supply Chain",
+        note: "Not identified in the current program. Evaluate for ingredients, packaging, finished goods, imports, exports, 3PLs, transit, and storage locations."
+      },
+      {
+        coverage: "Directors & Officers Liability",
+        status: "In Place",
+        priority: "Essential",
+        category: "Management Liability",
+        note: "Coverage is identified. Review for governance, investor, lender, acquisition, competitor, regulatory, and crisis event exposure."
+      },
+      {
+        coverage: "Employment Practices Liability",
+        status: "In Place",
+        priority: "Essential",
+        category: "Management Liability",
+        note: "Coverage is identified. Review third-party EPLI, wage/hour defense sublimits, multi-state workforce exposure, and claims handling terms."
+      },
+      {
+        coverage: "Fiduciary Liability",
+        status: "In Place",
+        priority: "Recommended",
+        category: "Management Liability",
+        note: "Coverage is identified. Review benefit plan definitions, defense costs, voluntary compliance program coverage, and plan asset exposure."
+      },
+      {
+        coverage: "Crime / Fidelity",
+        status: "In Place",
+        priority: "Recommended",
+        category: "Management Liability",
+        note: "Coverage is identified. Coordinate with cyber coverage to avoid gaps between employee theft, vendor fraud, wire fraud, and computer fraud."
+      },
+      {
+        coverage: "Social Engineering / Funds Transfer Fraud",
+        status: "In Place",
+        priority: "Recommended",
+        category: "Cyber / Crime",
+        note: "Coverage is identified. Review dual authorization requirements, impersonation triggers, invoice manipulation, payroll diversion, and cyber/crime coordination."
+      },
+      {
+        coverage: "Cyber Liability",
+        status: "Gap / Not Identified",
+        priority: "Essential",
+        category: "Cyber / Media / Technology",
+        note: "Not identified in the current program. Evaluate ransomware, privacy events, e-commerce outage, vendor outage, cyber BI, PCI, incident response, and reputational harm."
+      },
+      {
+        coverage: "Media Liability / Content Liability",
+        status: "Gap / Not Identified",
+        priority: "Essential",
+        category: "Cyber / Media / Technology",
+        note: "Not identified in the current program. Evaluate founder content, endorsements, testimonials, product claims, defamation, IP infringement, right of publicity, and crisis PR."
+      },
+      {
+        coverage: "Manufacturer’s E&O / Professional Liability",
+        status: "Gap / Not Identified",
+        priority: "Recommended",
+        category: "Product & Brand Protection",
+        note: "Not identified in the current program. Evaluate if Just Ingredients formulates, advises, private labels, contract manufactures, or supplies product specifications."
+      },
+      {
+        coverage: "Site Pollution / Environmental Liability",
+        status: "Gap / Not Identified",
+        priority: "Recommended",
+        category: "Property / Operations",
+        note: "Not identified in the current program. Evaluate cleanup, disposal, wastewater, transportation pollution, indoor air, mold, bacteria, and chemical/process exposure."
+      },
+      {
+        coverage: "Workers’ Compensation",
+        status: "Outside SIP Control",
+        priority: "Essential",
+        category: "Workforce",
+        note: "Coverage is noted as outside SIP’s current control. Multi-state payroll, class codes, safety programs, and experience modification should be reviewed."
+      },
+      {
+        coverage: "Employers Liability",
+        status: "Gap / Not Identified",
+        priority: "Essential",
+        category: "Workforce",
+        note: "Not identified in the current program. Review whether employers liability is present and whether excess coverage applies over it."
+      },
+      {
+        coverage: "Key Person Life",
+        status: "Gap / Not Identified",
+        priority: "Recommended",
+        category: "Executive Protection",
+        note: "Not identified in the current program. Evaluate against founder dependency, brand contribution, lender confidence, enterprise value, and continuity planning."
+      },
+      {
+        coverage: "Key Person Disability",
+        status: "Gap / Not Identified",
+        priority: "Recommended",
+        category: "Executive Protection",
+        note: "Not identified in the current program. Evaluate for potential loss of services where disability could materially affect sales, brand value, or enterprise continuity."
+      },
+      {
+        coverage: "Personal Umbrella / Personal Liability for Owner",
+        status: "Review / Confirm",
+        priority: "Essential",
+        category: "Executive Protection",
+        note: "Current status requires confirmation. Review personal liability, household, vehicle, real estate, public profile, personal media, and business-activity exclusions."
+      },
+      {
+        coverage: "Kidnap, Ransom & Extortion / Executive Protection",
+        status: "Gap / Not Identified",
+        priority: "Recommended",
+        category: "Executive Protection",
+        note: "Not identified in the current program. Evaluate if public profile, travel, events, doxxing, stalking, extortion, or family-security exposure is material."
+      },
+      {
+        coverage: "Event Liability / Appearance Coverage",
+        status: "Gap / Not Identified",
+        priority: "As Needed",
+        category: "Trigger-Based Coverage",
+        note: "Not identified in the current program. Evaluate for product launches, sampling, pop-ups, meet-and-greets, conferences, live selling, and owner-led events."
+      },
+      {
+        coverage: "IP Defense / Enforcement Insurance",
+        status: "Gap / Not Identified",
+        priority: "As Needed",
+        category: "Trigger-Based Coverage",
+        note: "Not identified in the current program. Evaluate for brand names, formulas, packaging, trade dress, content, slogans, music/images, and competitor disputes."
+      },
+      {
+        coverage: "Trade Credit Insurance",
+        status: "Gap / Not Identified",
+        priority: "As Needed",
+        category: "Trigger-Based Coverage",
+        note: "Not identified in the current program. Evaluate based on retailer, distributor, international buyer, customer concentration, and accounts receivable exposure."
+      },
+      {
+        coverage: "Foreign Package / Political Risk",
+        status: "Gap / Not Identified",
+        priority: "As Needed",
+        category: "Trigger-Based Coverage",
+        note: "Not identified in the current program. Evaluate for international sales, travel, foreign ingredients, foreign liability, political risk, and international property/transit exposure."
+      }
+    ];
+
+    function statusClass(status) {
+      if (status === "In Place") return "status-in-place";
+      if (status === "Review / Confirm") return "status-review";
+      if (status === "Outside SIP Control") return "status-outside";
+      return "status-gap";
+    }
+
+    function priorityClass(priority) {
+      if (priority === "Essential") return "priority-essential";
+      if (priority === "Recommended") return "priority-recommended";
+      return "priority-as-needed";
+    }
+
+    function renderCoverageCards() {
+      const grid = document.getElementById("coverageGrid");
+      if (!grid) return;
+      grid.innerHTML = coverageData.map(item => `
+        <article class="coverage-card" data-priority="${item.priority}" data-status="${item.status}">
+          <div class="coverage-top">
+            <h4>${item.coverage}</h4>
+            <span class="status-pill ${statusClass(item.status)}">${item.status}</span>
+          </div>
+          <p>${item.note}</p>
+          <div class="coverage-meta">
+            <span>${item.category}</span>
+            <span class="priority ${priorityClass(item.priority)}">${item.priority}</span>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function setTab(tabId, pushHash = true) {
+      if (!tabs.includes(tabId)) tabId = "summary";
+
+      document.querySelectorAll(".tab-button").forEach(button => {
+        const active = button.dataset.tab === tabId;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      document.querySelectorAll(".tab-panel").forEach(panel => {
+        panel.classList.toggle("active", panel.dataset.panel === tabId);
+      });
+
+      const mobile = document.querySelector(".mobile-nav");
+      if (mobile) mobile.value = tabId;
+
+      if (pushHash) {
+        history.replaceState(null, "", "#" + tabId);
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.title = `${tabLabels[tabId]} | Just Ingredients Executive Risk Management Review`;
+    }
+
+    function initTabs() {
+      document.querySelectorAll(".tab-button").forEach(button => {
+        button.addEventListener("click", () => setTab(button.dataset.tab));
+      });
+
+      const mobile = document.querySelector(".mobile-nav");
+      if (mobile) {
+        mobile.addEventListener("change", () => setTab(mobile.value));
+      }
+
+      document.querySelectorAll("[data-next], [data-prev]").forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.next || button.dataset.prev;
+          setTab(target);
+        });
+      });
+
+      const initial = window.location.hash ? window.location.hash.replace("#", "") : "summary";
+      setTab(initial, false);
+    }
+
+    function initCoverageFilters() {
+      document.querySelectorAll(".filter-button").forEach(button => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
+          document.querySelectorAll(".filter-button").forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          document.querySelectorAll(".coverage-card").forEach(card => {
+            const show =
+              filter === "all" ||
+              card.dataset.priority === filter ||
+              card.dataset.status === filter;
+
+            card.classList.toggle("hidden", !show);
+          });
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCoverageCards();
+      initTabs();
+      initCoverageFilters();
+    });
+  </script>
+</body>
+</html>
