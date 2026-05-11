@@ -660,9 +660,19 @@
     @media (max-width: 1060px) {
       .tablist { display: none; }
       .mobile-nav { display: block; }
-      .brand-row { grid-template-columns: 1fr; text-align: center; gap: 0.75rem; }
-      .brand-left,
-      .brand-right { justify-content: center; }
+      .brand-row {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        text-align: center;
+        gap: 0.85rem;
+        padding: 0.75rem 1.25rem 0.6rem;
+      }
+      .brand-left { justify-content: flex-start; }
+      .brand-right { justify-content: flex-end; }
+      .ji-logo { width: min(145px, 24vw); }
+      .sip-logo { width: min(175px, 28vw); }
+      .title-lockup h1 { font-size: clamp(1.05rem, 2.8vw, 1.55rem); }
+      .title-lockup p { font-size: 0.78rem; }
+      .nav-wrap { padding-bottom: 0.75rem; }
       .hero-metrics,
       .grid-4,
       .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -675,6 +685,16 @@
     @media (max-width: 680px) {
       .utility-inner,
       .footer-inner { flex-direction: column; align-items: flex-start; }
+      .utility-inner { gap: 0.25rem; padding: 0.48rem 1rem; font-size: 0.74rem; }
+      .brand-row {
+        gap: 0.5rem;
+        padding: 0.62rem 0.85rem 0.48rem;
+      }
+      .eyebrow { font-size: 0.58rem; padding: 0.22rem 0.48rem; letter-spacing: 0.055em; }
+      .title-lockup h1 { margin-top: 0.28rem; font-size: clamp(0.98rem, 5vw, 1.25rem); letter-spacing: -0.035em; }
+      .title-lockup p { display: none; }
+      .nav-wrap { padding: 0 0.85rem 0.75rem; }
+      .mobile-nav { padding: 0.78rem 0.9rem; border-radius: 12px; }
       .hero-metrics,
       .grid-2,
       .grid-3,
@@ -687,8 +707,8 @@
       .nav-action { width: 100%; }
       .toolbar { display: grid; grid-template-columns: 1fr 1fr; }
       .filter-btn { width: 100%; }
-      .ji-logo { width: min(190px, 72vw); }
-      .sip-logo { width: min(250px, 78vw); }
+      .ji-logo { width: clamp(54px, 18vw, 82px); }
+      .sip-logo { width: clamp(74px, 24vw, 105px); }
     }
 
     @media print {
