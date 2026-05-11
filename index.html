@@ -525,6 +525,24 @@
       margin-bottom: 0.75rem;
     }
 
+    .timeline-status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.28rem 0.55rem;
+      font-size: 0.68rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-left: 0.45rem;
+      vertical-align: top;
+    }
+
+    .timeline-status.completed { background: var(--green-bg); color: var(--green); }
+    .timeline-status.in-process { background: var(--blue-bg); color: var(--blue); }
+    .timeline-status.pending { background: var(--amber-bg); color: var(--amber); }
+
     .renewal-box {
       display: grid;
       grid-template-columns: 0.85fr 1.15fr;
@@ -760,7 +778,7 @@
           <div class="section-label">Executive Framing</div>
           <h2>This is not a full risk overhaul before renewal.</h2>
           <p>
-            With renewal timing in focus, the near-term goal is to secure the best available insurance structure and use the process to identify which risk management items should be addressed immediately, confirmed during quote review, or built into a formal post-renewal plan.
+            With renewal timing in focus, the near-term goal is to secure the best available insurance structure and use the process to identify which risk management items need to be addressed immediately, confirmed during quote review, or built into a formal post-renewal plan.
           </p>
         </div>
       </div>
@@ -768,11 +786,11 @@
       <div class="grid grid-4">
         <div class="card">
           <h3>Clarify What Exists</h3>
-          <p>Present the current program in plain English, without exposing limits, pricing, deductibles, or retentions.</p>
+          <p>Present the current program in plain English, including the coverage lines and current limits identified in the schedule.</p>
         </div>
         <div class="card">
           <h3>Focus the Renewal</h3>
-          <p>Use current market activity to pressure-test coverage, exclusions, sublimits, and carrier appetite.</p>
+          <p>Use the current soft market to push for aggressive pricing while reviewing coverage quality, exclusions, sublimits, and carrier appetite.</p>
         </div>
         <div class="card">
           <h3>Separate Urgent vs. Strategic</h3>
@@ -789,7 +807,7 @@
           <div class="section-label">Current Position</div>
           <h2>Just Ingredients already has meaningful coverage in place.</h2>
           <p>
-            The current program includes key operating, property, casualty, product, and management liability coverage. The focus should be on confirming quality of terms, identifying missing specialty lines, and deciding what can realistically be addressed in the current renewal window.
+            The current program includes key operating, property, casualty, product, and management liability coverage. The focus is to confirm quality of terms, identify missing specialty lines, and decide what can realistically be addressed in the current renewal window.
           </p>
         </div>
       </div>
@@ -798,25 +816,22 @@
         <div class="status-panel in-place">
           <h3>Core Coverage Identified as In Place</h3>
           <ul>
-            <li>Commercial General Liability</li>
-            <li>Commercial Property</li>
-            <li>Business Income & Extra Expense</li>
-            <li>Equipment Breakdown</li>
-            <li>Commercial Auto</li>
-            <li>Commercial Umbrella</li>
-            <li>Products Liability / Excess Liability, including Prop 65 consideration</li>
-            <li>Product Recall / Contaminated Product</li>
-            <li>D&O, EPLI, Fiduciary, Crime, and Social Engineering / Funds Transfer Fraud</li>
+            <li>Commercial General Liability — $1M per occurrence / $2M general aggregate</li>
+            <li>Commercial Property — coverage in place; blanket property option being evaluated</li>
+            <li>Business Income & Extra Expense — $2.5MM</li>
+            <li>Equipment Breakdown — $250,000 per location</li>
+            <li>Commercial Auto — $1MM combined single limit</li>
+            <li>Commercial Umbrella — $5MM</li>
+            <li>Products Liability / Excess Liability, including Prop 65 — $10MM/$10MM; $500K Prop 65 coverage</li>
+            <li>Product Recall / Contaminated Product — $2MM</li>
+            <li>D&O, EPLI, Fiduciary, and Crime — $1MM each; Social Engineering / Funds Transfer Fraud — $250K</li>
           </ul>
         </div>
         <div class="status-panel review">
           <h3>Needs Confirmation</h3>
           <ul>
-            <li>Products/completed operations treatment under GL</li>
-            <li>Blanket property approach and property valuation structure</li>
             <li>Employers Liability and excess treatment</li>
-            <li>Workers’ Compensation, which is outside SIP’s current control</li>
-            <li>Owner personal umbrella / personal liability status</li>
+            <li>Workers’ Compensation placement, payroll, class codes, and experience modification</li>
           </ul>
         </div>
         <div class="status-panel gap">
@@ -825,6 +840,8 @@
             <li>Cyber Liability</li>
             <li>Media / Content Liability</li>
             <li>Stock Throughput / Cargo</li>
+            <li>Blanket property approach and property valuation structure</li>
+            <li>Owner personal umbrella / personal liability status</li>
             <li>Manufacturer’s E&O</li>
             <li>Site Pollution / Environmental</li>
             <li>Key Person Life / Disability</li>
@@ -845,7 +862,7 @@
           <div class="section-label">Current Insurance Program</div>
           <h2>Coverage status based on the current program review.</h2>
           <p>
-            This page intentionally shows coverage status and review notes only. Current limits, recommended limits, pricing, deductibles, and retentions are omitted from the visible site.
+            This page shows coverage status, current coverage and limits identified in the schedule, review notes, and a separate recommended limits view. Pricing, deductibles, and retentions are not shown.
           </p>
         </div>
       </div>
@@ -865,15 +882,16 @@
         <button class="filter-btn active" data-filter="All">All</button>
         <button class="filter-btn" data-filter="In Place">In Place</button>
         <button class="filter-btn" data-filter="Review / Confirm">Review / Confirm</button>
-        <button class="filter-btn" data-filter="Not Identified">Not Identified</button>
-        <button class="filter-btn" data-filter="Outside SIP Control">Outside SIP Control</button>
+        <button class="filter-btn" data-filter="Needs Application">Needs Application</button>
+        <button class="filter-btn" data-filter="Recommended Limits">Recommended Limits</button>
       </div>
 
       <div class="coverage-table-wrap">
         <table aria-label="Current coverage status table">
           <thead>
-            <tr>
+            <tr id="coverageHeader">
               <th>Coverage Area</th>
+              <th>Current Coverage / Limit</th>
               <th>Status</th>
               <th>Priority</th>
               <th>Current Review Note</th>
@@ -882,7 +900,7 @@
           <tbody id="coverageRows"></tbody>
         </table>
       </div>
-      <p class="source-note">Source note: coverage status is based on the uploaded coverage recommendations workbook and the latest clarification that Commercial General Liability and Commercial Property are both in place.</p>
+      <p class="source-note">Source note: coverage status, current coverage, and recommended limits are based on the uploaded coverage recommendations workbook and the latest clarification that Commercial General Liability and Commercial Property are both in place.</p>
 
       <div class="panel-nav">
         <button class="nav-action" data-prev="summary">Previous: Summary</button>
@@ -896,7 +914,7 @@
           <div class="section-label">Priority Review</div>
           <h2>Separate renewal-critical items from longer-term risk management initiatives.</h2>
           <p>
-            The immediate question is not whether every possible coverage should be purchased before renewal. The immediate question is which items materially affect the renewal decision, which items need executive awareness, and which items should become part of the post-renewal plan.
+            The immediate question is not whether every possible coverage needs to be purchased before renewal. The immediate question is which items materially affect the renewal decision, which items need executive awareness, and which items need to become part of the post-renewal plan.
           </p>
         </div>
       </div>
@@ -909,10 +927,11 @@
           </div>
           <div class="priority-body">
             <ul>
-              <li>Confirm GL, products/completed operations, and excess structure.</li>
+              <li>Review GL and excess structure.</li>
               <li>Review property, business income, and equipment breakdown terms.</li>
-              <li>Pressure-test product recall wording and recall triggers.</li>
+              <li>Review product recall wording and recall triggers.</li>
               <li>Evaluate auto, umbrella, D&O, EPLI, crime, and social engineering terms.</li>
+              <li>Review Stock Throughput / Cargo for inventory in transit, 3PLs, and warehoused goods.</li>
               <li>Compare quotes by coverage quality, not only premium.</li>
             </ul>
           </div>
@@ -927,7 +946,6 @@
             <ul>
               <li>Cyber Liability for e-commerce, ransomware, data, PCI, and downtime risk.</li>
               <li>Media / Content Liability for founder-led content, testimonials, advertising, and product claims.</li>
-              <li>Stock Throughput / Cargo for inventory in transit, 3PLs, and warehoused goods.</li>
               <li>Manufacturer’s E&O if formulation, labeling/spec errors, private label, or advisory exposure exists.</li>
               <li>Key person and executive protection items tied to brand dependency.</li>
             </ul>
@@ -956,7 +974,7 @@
           <div class="section-label">Risk Lens</div>
           <h2>The largest exposures are multi-policy scenarios.</h2>
           <p>
-            For a growth-stage consumer wellness brand, the material claim scenarios rarely stay inside one policy. The renewal review should test how the program responds when several coverage lines are implicated at once.
+            For a growth-stage consumer wellness brand, the material claim scenarios rarely stay inside one policy. The renewal review will test how the program responds when several coverage lines are implicated at once.
           </p>
         </div>
       </div>
@@ -988,7 +1006,7 @@
           <div class="section-label">Renewal Action Plan</div>
           <h2>Use the renewal window to make focused decisions.</h2>
           <p>
-            Because the renewal is actively being marketed, the plan should be direct: complete the quote process, compare terms, identify urgent gaps, and schedule a leadership discussion around what should be addressed now versus immediately after renewal.
+            Because the renewal is actively being marketed, the plan is direct: complete the quote process, compare terms, identify urgent gaps, and schedule a leadership discussion around what will be addressed now versus immediately after renewal.
           </p>
         </div>
       </div>
@@ -1004,7 +1022,7 @@
           <ul class="clean-list">
             <li>Confirm all current coverage lines, including GL, Commercial Property, BI/EE, Umbrella, Products Liability, Product Recall, and management liability.</li>
             <li>Identify where competing quotes materially improve or weaken coverage terms, exclusions, sublimits, or claims handling.</li>
-            <li>Decide whether Cyber and Media Liability should be pursued immediately or formally scheduled as post-renewal initiatives.</li>
+            <li>Decide whether Cyber and Media Liability will be pursued immediately or formally scheduled as post-renewal initiatives.</li>
             <li>Clarify any coverage areas that require executive decision-making before binding.</li>
             <li>Capture all deferred risk management items into a written post-renewal roadmap.</li>
           </ul>
@@ -1021,21 +1039,25 @@
       <div class="timeline">
         <div class="timeline-card">
           <div class="timeline-number">1</div>
+          <span class="timeline-status completed">Completed</span>
           <h3>Confirm Current Program</h3>
-          <p>Validate what is in place, what is outside SIP control, and what requires confirmation.</p>
+          <p>Validate what is in place, what requires application detail, and what requires confirmation.</p>
         </div>
         <div class="timeline-card">
           <div class="timeline-number">2</div>
+          <span class="timeline-status in-process">In Process</span>
           <h3>Compare Quotes</h3>
           <p>Evaluate carrier options based on wording, exclusions, sublimits, financial strength, claims response, and cost.</p>
         </div>
         <div class="timeline-card">
           <div class="timeline-number">3</div>
+          <span class="timeline-status pending">Pending</span>
           <h3>Prioritize Decisions</h3>
-          <p>Agree on what must be addressed before binding and what should move to the post-renewal plan.</p>
+          <p>Agree on what must be addressed before binding and what will move to the post-renewal plan.</p>
         </div>
         <div class="timeline-card">
           <div class="timeline-number">4</div>
+          <span class="timeline-status pending">Pending</span>
           <h3>Bind and Roadmap</h3>
           <p>Bind the selected renewal program and schedule the first post-renewal risk strategy session.</p>
         </div>
@@ -1053,7 +1075,7 @@
           <div class="section-label">Post-Renewal Roadmap</div>
           <h2>Turn the renewal into a broader risk management plan.</h2>
           <p>
-            The broader risk work should not be forced into the current renewal window. Instead, SIP should use the renewal as the starting point for a practical post-renewal cadence with Just Ingredients’ leadership team.
+            The broader risk work will not be forced into the current renewal window. Instead, SIP will use the renewal as the starting point for a practical post-renewal cadence with Just Ingredients’ leadership team.
           </p>
         </div>
       </div>
@@ -1137,7 +1159,7 @@
 
       <div class="grid grid-2">
         <div class="card">
-          <h3>What SIP Should Lead Now</h3>
+          <h3>What SIP Will Lead Now</h3>
           <ul class="clean-list">
             <li>Quote collection and market comparison</li>
             <li>Coverage term review and exclusion analysis</li>
@@ -1147,7 +1169,7 @@
           </ul>
         </div>
         <div class="card">
-          <h3>What SIP Should Lead Next</h3>
+          <h3>What SIP Will Lead Next</h3>
           <ul class="clean-list">
             <li>Post-renewal risk management roadmap</li>
             <li>Product recall and quality-control risk discussion</li>
@@ -1166,7 +1188,7 @@
       </div>
 
       <div class="quote-card">
-        Just Ingredients has meaningful coverage in place today. The renewal process should be used to confirm the strongest available terms and protect against immediate coverage concerns, while the post-renewal roadmap should be used to build a more complete risk management strategy around product risk, brand risk, cyber exposure, supply chain dependency, and executive leadership exposure.
+        Just Ingredients has meaningful coverage in place today. Specialty Insurance Partners will use the renewal process to confirm the strongest available terms and protect against immediate coverage concerns, while the post-renewal roadmap will build a more complete risk management strategy around product risk, brand risk, cyber exposure, supply chain dependency, and executive leadership exposure.
       </div>
 
       <div class="section-head">
@@ -1195,7 +1217,7 @@
         </div>
         <div class="card">
           <h3>5. Post-Renewal Roadmap</h3>
-          <p>Schedule the deeper risk management work that should not be rushed before renewal.</p>
+          <p>Schedule the deeper risk management work that will not be rushed before renewal.</p>
         </div>
         <div class="card">
           <h3>6. Ongoing Cadence</h3>
@@ -1229,42 +1251,251 @@
     };
 
     const coverageData = [
-      { area: "Commercial General Liability", status: "In Place", priority: "Essential", note: "Coverage is currently in place. Review products/completed operations treatment and any nutraceutical, ingestible product, efficacy, stimulant, weight-loss, or banned-substance exclusions." },
-      { area: "Commercial Property", status: "In Place", priority: "Essential", note: "Coverage is currently in place. Review whether a blanket property approach is available and appropriate, including stock, equipment, brands and labels, and unnamed locations." },
-      { area: "Business Income & Extra Expense", status: "In Place", priority: "Essential", note: "Coverage is identified. Review shutdown duration, extended period of indemnity, contingent BI, utilities, co-packer, 3PL, and supplier dependencies." },
-      { area: "Equipment Breakdown", status: "In Place", priority: "Recommended", note: "Coverage is identified. Review alignment with production loss, spoilage, utility interruption, and business income exposure." },
-      { area: "Commercial Auto", status: "In Place", priority: "Essential", note: "Coverage is identified. Confirm hired/non-owned auto exposure, executive or employee vehicle use, rental vehicles, and product transport." },
-      { area: "Commercial Umbrella", status: "In Place", priority: "Essential", note: "Coverage is identified. Review whether the umbrella/excess structure responds appropriately over GL and auto exposure." },
-      { area: "Products Liability / Excess Liability, including Prop 65", status: "In Place", priority: "Essential", note: "Coverage is identified. Review excess follow-form language, Prop 65 treatment, and exclusions tied to nutraceutical, ingestible, efficacy, stimulant, weight-loss, or banned-substance claims." },
-      { area: "Product Recall / Contaminated Product", status: "In Place", priority: "Essential", note: "Coverage is identified. Review triggers for contamination, mislabeling, government recall, adverse publicity, retailer chargebacks, brand rehabilitation, and lost gross profit." },
-      { area: "Product Withdrawal Expense Endorsement", status: "In Place", priority: "Recommended", note: "Coverage is identified as supplemental. It should not be treated as a replacement for standalone recall or contaminated product coverage." },
-      { area: "D&O Liability", status: "In Place", priority: "Essential", note: "Coverage is identified. Review governance, lender, investor, acquisition, competitor, regulatory, and crisis event exposure." },
-      { area: "Employment Practices Liability", status: "In Place", priority: "Essential", note: "Coverage is identified. Review third-party EPLI, wage/hour defense sublimits, multi-state workforce exposure, and claims handling terms." },
-      { area: "Fiduciary Liability", status: "In Place", priority: "Recommended", note: "Coverage is identified. Review benefit plan definitions, defense costs, voluntary compliance program coverage, and plan asset exposure." },
-      { area: "Crime / Fidelity", status: "In Place", priority: "Recommended", note: "Coverage is identified. Coordinate with cyber and social engineering coverage so claims do not fall between policies." },
-      { area: "Social Engineering / Funds Transfer Fraud", status: "In Place", priority: "Recommended", note: "Coverage is identified. Review dual authorization requirements, invoice manipulation, payroll diversion, executive impersonation, and cyber/crime coordination." },
-      { area: "Workers’ Compensation", status: "Outside SIP Control", priority: "Essential", note: "Coverage is noted as outside SIP’s current control. Multi-state payroll, class codes, safety programs, and experience modification should be reviewed." },
-      { area: "Employers Liability", status: "Review / Confirm", priority: "Essential", note: "Current status should be confirmed. Review whether employers liability is present and whether excess coverage applies over it." },
-      { area: "Personal Umbrella / Personal Liability for Owner", status: "Review / Confirm", priority: "Essential", note: "Current status requires confirmation. Review personal liability, public profile, household, vehicle, real estate, personal media, and business-activity exclusions." },
-      { area: "Cyber Liability", status: "Not Identified", priority: "Essential", note: "Not identified in the current program. Evaluate ransomware, privacy events, e-commerce outage, vendor outage, cyber BI, PCI, incident response, and reputational harm." },
-      { area: "Media / Content Liability", status: "Not Identified", priority: "Essential", note: "Not identified in the current program. Evaluate founder content, endorsements, testimonials, product claims, defamation, IP infringement, right of publicity, and crisis PR." },
-      { area: "Stock Throughput / Cargo / Ocean Marine", status: "Not Identified", priority: "Recommended", note: "Not identified in the current program. Evaluate ingredients, packaging, finished goods, imports, exports, 3PLs, transit, and storage locations." },
-      { area: "Manufacturer’s E&O / Professional Liability", status: "Not Identified", priority: "Recommended", note: "Not identified in the current program. Evaluate if Just Ingredients formulates, advises, private labels, contract manufactures, or supplies product specifications." },
-      { area: "Site Pollution / Environmental Liability", status: "Not Identified", priority: "Recommended", note: "Not identified in the current program. Evaluate cleanup, disposal, wastewater, transportation pollution, indoor air, mold, bacteria, and chemical/process exposure." },
-      { area: "Key Person Life", status: "Not Identified", priority: "Recommended", note: "Not identified in the current program. Evaluate founder dependency, brand contribution, lender confidence, enterprise value, and continuity planning." },
-      { area: "Key Person Disability", status: "Not Identified", priority: "Recommended", note: "Not identified in the current program. Evaluate whether disability could materially affect sales, brand value, enterprise continuity, or lender confidence." },
-      { area: "K&R / Executive Protection", status: "Not Identified", priority: "Recommended", note: "Not identified in the current program. Evaluate public profile, travel, events, doxxing, stalking, extortion, and family security exposure." },
-      { area: "Clinical Trials", status: "Not Identified", priority: "As Needed", note: "Not identified in the current program. Evaluate only if product testing, clinical trials, study activity, or related protocols are contemplated." },
-      { area: "Event Liability / Appearance Coverage", status: "Not Identified", priority: "As Needed", note: "Not identified in the current program. Evaluate for product launches, sampling, pop-ups, meet-and-greets, conferences, and owner-led appearances." },
-      { area: "IP Defense / Enforcement Insurance", status: "Not Identified", priority: "As Needed", note: "Not identified in the current program. Evaluate for brand names, formulas, packaging, trade dress, content, slogans, music/images, and competitor disputes." },
-      { area: "Trade Credit Insurance", status: "Not Identified", priority: "As Needed", note: "Not identified in the current program. Evaluate based on retailer, distributor, international buyer, customer concentration, and accounts receivable exposure." },
-      { area: "Foreign Package / Political Risk", status: "Not Identified", priority: "As Needed", note: "Not identified in the current program. Evaluate for international sales, travel, foreign ingredients, foreign liability, political risk, and international property/transit exposure." }
-    ];
+      {
+            "area": "Commercial General Liability",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$1M per occurrence / $2M general aggregate",
+            "recommendedLimit": "$1M per occurrence / $2M general aggregate",
+            "note": "Coverage is currently in place. Review any nutraceutical, ingestible product, efficacy, stimulant, weight-loss, or banned-substance exclusions."
+      },
+      {
+            "area": "Commercial Property",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "Coverage in place; blanket property option being evaluated with CNA",
+            "recommendedLimit": "Full replacement cost for business personal property, equipment, stock, and tenant improvements",
+            "note": "Coverage is currently in place. Review whether a blanket property approach is available and appropriate, including stock, equipment, brands and labels, and unnamed locations."
+      },
+      {
+            "area": "Business Income & Extra Expense",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$2.5MM",
+            "recommendedLimit": "18–24 months actual loss sustained; 365–730 days extended period of indemnity; $5MM minimum–$10MM",
+            "note": "Coverage is identified. Review shutdown duration, extended period of indemnity, contingent BI, utilities, co-packer, 3PL, and supplier dependencies."
+      },
+      {
+            "area": "Equipment Breakdown",
+            "status": "In Place",
+            "priority": "Recommended",
+            "currentCoverage": "250,000 per location",
+            "recommendedLimit": "$1,000,000 per location",
+            "note": "Coverage is identified. Review alignment with production loss, spoilage, utility interruption, and business income exposure."
+      },
+      {
+            "area": "Commercial Auto",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$1MM combined single limit",
+            "recommendedLimit": "$1M combined single limit plus excess tower",
+            "note": "Coverage is identified. Confirm hired/non-owned auto exposure, executive or employee vehicle use, rental vehicles, and product transport."
+      },
+      {
+            "area": "Commercial Umbrella",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$5MM",
+            "recommendedLimit": "$15MM-$20MM",
+            "note": "Coverage is identified. Review whether the umbrella/excess structure responds appropriately over GL and auto exposure."
+      },
+      {
+            "area": "Products Liability / Excess Liability, including Prop 65",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$10MM/$10MM; $500K Prop 65 coverage",
+            "recommendedLimit": "$20M–$50M total tower; preferred target $100M+",
+            "note": "Coverage is identified. Review excess follow-form language, Prop 65 treatment, and exclusions tied to nutraceutical, ingestible, efficacy, stimulant, weight-loss, or banned-substance claims."
+      },
+      {
+            "area": "Product Recall / Contaminated Product",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$2MM",
+            "recommendedLimit": "$25M–$50M",
+            "note": "Coverage is identified. Review triggers for contamination, mislabeling, government recall, adverse publicity, retailer chargebacks, brand rehabilitation, and lost gross profit."
+      },
+      {
+            "area": "Product Withdrawal Expense Endorsement",
+            "status": "In Place",
+            "priority": "Recommended",
+            "currentCoverage": "$250K/$250K",
+            "recommendedLimit": "$250K–$1M",
+            "note": "Coverage is identified as supplemental. It is not a replacement for standalone recall or contaminated product coverage."
+      },
+      {
+            "area": "D&O Liability",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$1MM",
+            "recommendedLimit": "$10M–$25M; consider $25M–$50M with investors, debt, M&A, or ESOP exposure",
+            "note": "Coverage is identified. Review governance, lender, investor, acquisition, competitor, regulatory, and crisis event exposure."
+      },
+      {
+            "area": "Employment Practices Liability",
+            "status": "In Place",
+            "priority": "Essential",
+            "currentCoverage": "$1MM",
+            "recommendedLimit": "$5M–$10M; consider $10M–$15M for large multi-state workforce",
+            "note": "Coverage is identified. Review EPLI extensions, wage/hour defense sublimits, multi-state workforce exposure, and claims handling terms."
+      },
+      {
+            "area": "Fiduciary Liability",
+            "status": "In Place",
+            "priority": "Recommended",
+            "currentCoverage": "$1MM",
+            "recommendedLimit": "$2M–$5M; $5M–$10M if large retirement plan or ESOP",
+            "note": "Coverage is identified. Review benefit plan definitions, defense costs, voluntary compliance program coverage, and plan asset exposure."
+      },
+      {
+            "area": "Crime / Fidelity",
+            "status": "In Place",
+            "priority": "Recommended",
+            "currentCoverage": "$1MM",
+            "recommendedLimit": "$2M–$5M",
+            "note": "Coverage is identified. Coordinate with cyber and social engineering coverage so claims do not fall between policies."
+      },
+      {
+            "area": "Social Engineering / Funds Transfer Fraud",
+            "status": "In Place",
+            "priority": "Recommended",
+            "currentCoverage": "$250K",
+            "recommendedLimit": "$1M–$5M",
+            "note": "Coverage is identified. Review dual authorization requirements, invoice manipulation, payroll diversion, executive impersonation, and cyber/crime coordination."
+      },
+      {
+            "area": "Workers’ Compensation",
+            "status": "Review / Confirm",
+            "priority": "Essential",
+            "currentCoverage": "Review / confirm current placement",
+            "recommendedLimit": "Statutory",
+            "note": "Current placement needs review. Multi-state payroll, class codes, safety programs, and experience modification need confirmation."
+      },
+      {
+            "area": "Employers Liability",
+            "status": "Review / Confirm",
+            "priority": "Essential",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$1M / $1M / $1M minimum; include in excess tower",
+            "note": "Current status needs confirmation. Review whether employers liability is present and whether excess coverage applies over it."
+      },
+      {
+            "area": "Personal Umbrella / Personal Liability for Owner",
+            "status": "Review / Confirm",
+            "priority": "Essential",
+            "currentCoverage": "Needs confirmation",
+            "recommendedLimit": "$25M–$100M",
+            "note": "Current status requires confirmation. Review personal liability, public profile, household, vehicle, real estate, personal media, and business-activity exclusions."
+      },
+      {
+            "area": "Cyber Liability",
+            "status": "Needs Application",
+            "priority": "Essential",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$25M–$50M",
+            "note": "Application detail is needed to evaluate ransomware, privacy events, e-commerce outage, vendor outage, cyber BI, PCI, incident response, and reputational harm."
+      },
+      {
+            "area": "Media / Content Liability",
+            "status": "Needs Application",
+            "priority": "Essential",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$5M–$10M; consider $10M–$25M for major influencer exposure",
+            "note": "Application detail is needed to evaluate founder content, endorsements, testimonials, product claims, defamation, IP infringement, right of publicity, and crisis PR."
+      },
+      {
+            "area": "Stock Throughput / Cargo / Ocean Marine",
+            "status": "Needs Application",
+            "priority": "Recommended",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$10M–$25M any one conveyance/location; $25M–$50M catastrophe/accumulation",
+            "note": "Application detail is needed to evaluate ingredients, packaging, finished goods, imports, exports, 3PLs, transit, and storage locations."
+      },
+      {
+            "area": "Manufacturer’s E&O / Professional Liability",
+            "status": "Needs Application",
+            "priority": "Recommended",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$5M–$10M; $10M–$25M if formulation, private label, or contract manufacturing",
+            "note": "Application detail is needed to evaluate whether Just Ingredients formulates, advises, private labels, contract manufactures, or supplies product specifications."
+      },
+      {
+            "area": "Site Pollution / Environmental Liability",
+            "status": "Needs Application",
+            "priority": "Recommended",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$5M–$10M; consider $10M–$25M for chemical/process exposure",
+            "note": "Application detail is needed to evaluate cleanup, disposal, wastewater, transportation pollution, indoor air, mold, bacteria, and chemical/process exposure."
+      },
+      {
+            "area": "Key Person Life",
+            "status": "Needs Application",
+            "priority": "Recommended",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$25M–$100M",
+            "note": "Application detail is needed to evaluate founder dependency, brand contribution, lender confidence, enterprise value, and continuity planning."
+      },
+      {
+            "area": "Key Person Disability",
+            "status": "Needs Application",
+            "priority": "Recommended",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$5M–$25M if available",
+            "note": "Application detail is needed to evaluate whether disability could materially affect sales, brand value, enterprise continuity, or lender confidence."
+      },
+      {
+            "area": "K&R / Executive Protection",
+            "status": "Needs Application",
+            "priority": "Recommended",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$5M–$25M",
+            "note": "Application detail is needed to evaluate public profile, travel, events, doxxing, stalking, extortion, and family security exposure."
+      },
+      {
+            "area": "Clinical Trials",
+            "status": "Needs Application",
+            "priority": "As Needed",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$10MM",
+            "note": "Application detail is needed only if product testing, clinical trials, study activity, or related protocols are contemplated."
+      },
+      {
+            "area": "Event Liability / Appearance Coverage",
+            "status": "Needs Application",
+            "priority": "As Needed",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$1M/$2M for standard events; $5M–$25M excess for major events",
+            "note": "Application detail is needed for product launches, sampling, pop-ups, meet-and-greets, conferences, and owner-led appearances."
+      },
+      {
+            "area": "IP Defense / Enforcement Insurance",
+            "status": "Needs Application",
+            "priority": "As Needed",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$2M–$10M",
+            "note": "Application detail is needed for brand names, formulas, packaging, trade dress, content, slogans, music/images, and competitor disputes."
+      },
+      {
+            "area": "Trade Credit Insurance",
+            "status": "Needs Application",
+            "priority": "As Needed",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "Based on customer concentration and accounts receivable exposure",
+            "note": "Application detail is needed based on retailer, distributor, international buyer, customer concentration, and accounts receivable exposure."
+      },
+      {
+            "area": "Foreign Package / Political Risk",
+            "status": "Needs Application",
+            "priority": "As Needed",
+            "currentCoverage": "None identified",
+            "recommendedLimit": "$2M–$5M foreign package; political risk based on values",
+            "note": "Application detail is needed for international sales, travel, foreign ingredients, foreign liability, political risk, and international property/transit exposure."
+      }
+];
 
     function statusClass(status) {
       if (status === "In Place") return "in-place";
       if (status === "Review / Confirm") return "review";
-      if (status === "Outside SIP Control") return "outside";
       return "gap";
     }
 
@@ -1276,11 +1507,39 @@
 
     function renderCoverageRows(filter = "All") {
       const tbody = document.getElementById("coverageRows");
-      if (!tbody) return;
+      const header = document.getElementById("coverageHeader");
+      if (!tbody || !header) return;
+
+      if (filter === "Recommended Limits") {
+        header.innerHTML = `
+          <th>Coverage Area</th>
+          <th>Current Coverage / Limit</th>
+          <th>Recommended Limits</th>
+          <th>Priority</th>
+        `;
+        tbody.innerHTML = coverageData.map(item => `
+          <tr>
+            <td><strong>${item.area}</strong></td>
+            <td>${item.currentCoverage}</td>
+            <td>${item.recommendedLimit}</td>
+            <td><span class="pill ${priorityClass(item.priority)}">${item.priority}</span></td>
+          </tr>
+        `).join("");
+        return;
+      }
+
+      header.innerHTML = `
+        <th>Coverage Area</th>
+        <th>Current Coverage / Limit</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Current Review Note</th>
+      `;
       const rows = coverageData.filter(item => filter === "All" || item.status === filter);
       tbody.innerHTML = rows.map(item => `
         <tr>
           <td><strong>${item.area}</strong></td>
+          <td>${item.currentCoverage}</td>
           <td><span class="pill ${statusClass(item.status)}">${item.status}</span></td>
           <td><span class="pill ${priorityClass(item.priority)}">${item.priority}</span></td>
           <td>${item.note}</td>
